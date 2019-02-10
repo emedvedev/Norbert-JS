@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+}
+
+#particles-js{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f0c29, #302b63, #24243e);
+  background-size: cover;
+}
+
+.first-page {
+	width: 100%;
+	height: 200px;
+	background: ;
+	position: absolute;
+	top: 20%;
+}
+
+.first-page-name-logo {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	background: ;
+	width: 900px;
+	height: 200px;
+}
+
+.first-page-subtitle {
+	position: relative;
+	width: 900px;
+	height: 100px;
+	background-color: ;
+	margin-right: auto;
+	margin-left: auto;
+	top: 10px;
+	text-align: center;
+}
+
+.first-page-subtitle p {
+	color: white;
+	font-size: 27px;
+	font-family: courier;
+}
+
+.main-page {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+.scroll-down {
+	width: 100%;
+	height: 7%;
+	position: absolute;
+	top: 93%;
+	background-color: ;
+}
+
+.scroll-down-icon {
+	position: relative;
+	background-color: none;
+	border-radius: 100%;
+	width: 70px;
+	height: 65px;
+	margin-left: auto;
+	margin-right: auto;
+	top: -20px;
+	z-index: 999;
+	transition: .3s;
+}
+
+.scroll-down-icon:hover {
+	background: rgba(255, 255, 255, .1)
+} 
+
+#scroll-down-icon {
+	width: 70px;
+	height: 65px;
+}
+
+
+#canv {
+	background: white;
+	border: 1px solid #0f0c29;
+	margin: auto;
+	position: absolute;
+	top: 0;right: 0;bottom: 0;left: 0;
+}
