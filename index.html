@@ -38,7 +38,7 @@
 	</div>
 
 					<div class="main-page" id="main-page">
-						
+
 						<canvas id="canv" style="display: block;">Ваш Браузер устарел, Обновитесь!</canvas>
 
 					</div>
@@ -48,7 +48,7 @@
 <script src="particles.js"></script>
 <script src="js/app.js"></script>
 
-	
+
 				<script>
 		function DCanvas(el)
 		{
@@ -194,24 +194,31 @@
 				d.clear();
 			}
 
-			if( e.key.toLowerCase() == 'v' )
+			if( e.key == '1' )
 			{
 				vector = d.calculate(true);
-				
-				//train
-				if( confirm('Square?') )
-				{
-					train_data.push({
-						input: vector,
-						output: {Square: 1}
-					});
-				} else
-				{
-					train_data.push({
-						input: vector,
-						output: {Circle: 1}
-					});
-				}
+				train_data.push({
+					input: vector,
+					output: {Square: 1}
+				});
+			}
+
+			if( e.key == '2' )
+			{
+				vector = d.calculate(true);
+				train_data.push({
+					input: vector,
+					output: {Circle: 1}
+				});
+			}
+
+			if( e.key == '3' )
+			{
+				vector = d.calculate(true);
+				train_data.push({
+					input: vector,
+					output: {Triangle: 1}
+				});
 			}
 
 			if( e.key.toLowerCase() == 'b' )
