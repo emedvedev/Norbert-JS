@@ -41,6 +41,17 @@
 
 						<canvas id="canv" style="display: block;">Ваш Браузер устарел, Обновитесь!</canvas>
 
+						<div class="hotkeys-help">
+							<h3>Помощь</h3>
+							<ul>
+								<li><strong id="key-1">1</strong> Тренировать: квадрат</li>
+								<li><strong id="key-2">2</strong> Тренировать: круг</li>
+								<li><strong id="key-3">3</strong> Тренировать: треугольник</li>
+								<li><strong id="key-b">B</strong> Распознать</li>
+								<li><strong id="key-c">C</strong> Очистить</li>
+							</ul>
+						</div>
+
 					</div>
 
 
@@ -189,6 +200,13 @@
 		const d = new DCanvas(document.getElementById('canv'));
 
 		document.addEventListener('keypress', function(e) {
+
+			let help_key = document.getElementById('key-'+e.key.toLowerCase());
+			if (help_key) {
+				help_key.classList.add('active');
+				setTimeout(function() { help_key.classList.remove('active'); }, 500);
+			};
+
 			if( e.key.toLowerCase() == 'c' )
 			{
 				d.clear();
@@ -199,7 +217,7 @@
 				vector = d.calculate(true);
 				train_data.push({
 					input: vector,
-					output: {Square: 1}
+					output: {'Квадрат': 1}
 				});
 			}
 
@@ -208,7 +226,7 @@
 				vector = d.calculate(true);
 				train_data.push({
 					input: vector,
-					output: {Circle: 1}
+					output: {'Круг': 1}
 				});
 			}
 
@@ -217,7 +235,7 @@
 				vector = d.calculate(true);
 				train_data.push({
 					input: vector,
-					output: {Triangle: 1}
+					output: {'Треугольник': 1}
 				});
 			}
 
