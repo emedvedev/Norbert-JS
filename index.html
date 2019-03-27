@@ -202,9 +202,9 @@
 		document.addEventListener('keypress', function(e) {
 
 			let help_key = document.getElementById('key-'+e.key.toLowerCase());
+
 			if (help_key) {
 				help_key.classList.add('active');
-				setTimeout(function() { help_key.classList.remove('active'); }, 500);
 			};
 
 			if( e.key.toLowerCase() == 'c' )
@@ -247,6 +247,11 @@
 				const result = brain.likely(d.calculate(), net);
 				alert(result);
 			}
+
+			if (help_key) {
+				setTimeout(function() { help_key.classList.remove('active'); }, 500);
+			}
+
 		});
 	</script>
 
